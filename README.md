@@ -1,4 +1,4 @@
-# Cordova Hello World Plugin
+# Cordova Keyguard Lock Plugin
 
 Simple plugin that returns weather keyguard lock is enabled or not
 
