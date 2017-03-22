@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns=""
+        id="com.lotus.keyguard"
+        version="0.0.1">
+
+  <name>Keyguard-Lock</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/keyguard.js" target="js/keyguard.js"/>
+
+  <js-module src="www/keyguard.js" name="keyguard">
+    <clobbers target="keyguard" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="Keyguard">
+        <param name="android-package" value="com.lotus.plugin.Keyguard"/>
+      </feature>
+    </config-file>
+
+    <source-file src="src/android/Keyguard.java" target-dir="src/com/lotus/plugin/"/>
+  </platform>
+
+  <platform name="ios">
+    
+    <config-file target="config.xml" parent="/widget">
+      <feature name="Keyguard">
+        <param name="ios-package" value="Keyguard" />
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/Keyguard.h" target-dir="Keyguard"/>
+    <source-file src="src/ios/Keyguard.m" target-dir="Keyguard"/>
+  </platform>
+
+  <platform name="wp7">
+    <source-file src="src/wp7/Hello.cs"/>
+  </platform>
+
+</plugin>
