@@ -9,10 +9,10 @@
     NSString* msg = [NSString stringWithFormat: @"Hello, %@", name];
      BOOL isPassCodeEnabled = [self deviceHasPasscode];
     if (isPassCodeEnabled) {
-        msg = @"Passcode enabled";
+        msg = @"true";
     }
     else{
-        msg = @"Passcode not enabled";
+        msg = @"false";
     }
     CDVPluginResult* result = [CDVPluginResult
                                resultWithStatus:CDVCommandStatus_OK
