@@ -35,11 +35,11 @@ public class Keyguard extends CordovaPlugin {
     boolean deviceLockStatus = keyguardManager.isKeyguardSecure();
         if(deviceLockStatus)
         {
-            callbackContext.success("Hello true");
+            callbackContext.success("true");
         }
         else
         {
-            callbackContext.success("Hello false");
+            callbackContext.success("false");
         }
 
 
